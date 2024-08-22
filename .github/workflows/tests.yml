@@ -27,6 +27,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: List vendor/bin contents
+        run: ls -la ./vendor/bin/
+
+      - name: Show testing command
+        run: echo "Running tests with ./vendor/bin/pest"
+
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
